@@ -682,8 +682,16 @@ function Footer() {
         <div className="md:col-span-3">
           <div className="text-[10px] tracking-[0.22em] uppercase text-background/50">Quick Links</div>
           <ul className="mt-6 space-y-3 text-sm">
-            {["About", "Services", "Portfolio", "Process", "Testimonials", "FAQs", "Contact"].map((l) => (
-              <li key={l}><a href={`#${l.toLowerCase().replace("s", l === "FAQs" ? "" : "s").replace("faq", "faq")}`} className="link-underline text-background/80">{l}</a></li>
+            {[
+              ["About", "#about"],
+              ["Services", "#services"],
+              ["Portfolio", "#portfolio"],
+              ["Process", "#process"],
+              ["Testimonials", "#testimonials"],
+              ["FAQs", "#faq"],
+              ["Contact", "#contact"],
+            ].map(([l, href]) => (
+              <li key={l}><a href={href} className="link-underline text-background/80">{l}</a></li>
             ))}
           </ul>
         </div>
