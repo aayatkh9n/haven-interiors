@@ -624,7 +624,19 @@ function Faq() {
                   style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}
                 >
                   <div className="overflow-hidden">
-                    <p className="pb-7 pr-10 text-charcoal leading-relaxed">{f.a}</p>
+                    <div className="pb-7 pr-4 md:pr-10">
+                      <p className="text-charcoal leading-relaxed">{f.a}</p>
+                      <a
+                        href={buildWaUrl(
+                          `Hello Good Home Interiors, I have a question: ${f.q}`,
+                        )}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-5 inline-flex items-center gap-2 text-[11px] tracking-[0.22em] uppercase link-underline text-foreground"
+                      >
+                        Ask this on WhatsApp <span>→</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
