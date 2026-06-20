@@ -1,11 +1,12 @@
 const PHONE = "919028880339";
+const WHATSAPP_BASE_URL = "https://web.whatsapp.com/send";
 
 export function buildWaUrl(message?: string) {
   const text = encodeURIComponent(
     message ??
       "Hello Good Home Interiors, I'd like to know more about your interior design services.",
   );
-  return `https://wa.me/${PHONE}?text=${text}`;
+  return `${WHATSAPP_BASE_URL}?phone=${PHONE}&text=${text}`;
 }
 
 export function WhatsAppButton() {
