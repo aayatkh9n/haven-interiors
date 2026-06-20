@@ -111,7 +111,12 @@ export function HomePage() {
         <a href={`tel:${PHONE_TEL}`} className="py-3.5 text-center text-[12px] tracking-[0.22em] uppercase border-r border-border">
           Call Now
         </a>
-        <a href="#contact-form" className="py-3.5 text-center text-[12px] tracking-[0.22em] uppercase bg-foreground text-background">
+        <a
+          href={buildWaUrl("Hello Good Home Interiors, I'd like to book a free consultation.")}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="py-3.5 text-center text-[12px] tracking-[0.22em] uppercase bg-foreground text-background"
+        >
           Book Consultation
         </a>
       </div>
