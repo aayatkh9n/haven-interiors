@@ -123,7 +123,10 @@ export function HomePage() {
 
 function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-end overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-[100svh] flex items-center overflow-hidden pt-28 md:pt-32 pb-28 md:pb-24"
+    >
       <img
         src={heroImg}
         alt="Editorial interior with travertine table and arched windows"
@@ -132,33 +135,44 @@ function Hero() {
         height={1080}
         fetchPriority="high"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/10 to-background/85" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/15 to-background/90" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/55 via-background/10 to-transparent" />
 
-      <div className="container-editorial relative pb-24 md:pb-32 pt-40 w-full">
-        <div className="max-w-4xl fade-up">
-          <p className="eyebrow hairline mb-8 text-foreground/80">Interior Design Studio · Badlapur</p>
-          <h1 className="display-xl text-foreground">
-            Designing spaces<br />
-            that feel like <em className="not-italic text-charcoal italic font-light">home.</em>
+      <div className="container-editorial relative w-full">
+        <div className="max-w-3xl fade-up">
+          <p className="eyebrow hairline mb-6 md:mb-8 text-foreground/80">
+            Interior Design Studio · Badlapur
+          </p>
+          <h1 className="display-xl text-foreground text-balance">
+            Designing spaces<br className="hidden sm:block" />{" "}
+            that feel like{" "}
+            <em className="not-italic text-charcoal italic font-light">home.</em>
           </h1>
-          <p className="mt-8 max-w-xl text-base md:text-lg text-charcoal leading-relaxed">
+          <p className="mt-6 md:mt-8 max-w-xl text-[15px] md:text-lg text-charcoal leading-relaxed">
             Good Home Interiors is a premium design studio crafting calm, considered residences across
             Maharashtra. Architectural detail, honest materials, and end-to-end execution.
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a href="#contact" className="group inline-flex items-center gap-3 bg-foreground text-background px-7 py-4 text-[12px] tracking-[0.22em] uppercase hover:bg-charcoal transition-colors">
+          <div className="mt-8 md:mt-10 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
+            <a
+              href="#contact-form"
+              className="group inline-flex items-center justify-center gap-3 bg-foreground text-background px-7 py-4 text-[12px] tracking-[0.22em] uppercase hover:bg-charcoal transition-colors"
+            >
               Book Free Consultation
               <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
             </a>
-            <a href={buildWaUrl()} target="_blank" rel="noopener noreferrer"
-               className="inline-flex items-center gap-3 border border-foreground/30 text-foreground px-7 py-4 text-[12px] tracking-[0.22em] uppercase hover:bg-foreground hover:text-background transition-colors">
+            <a
+              href={buildWaUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 border border-foreground/30 text-foreground px-7 py-4 text-[12px] tracking-[0.22em] uppercase hover:bg-foreground hover:text-background transition-colors"
+            >
               Chat on WhatsApp
             </a>
           </div>
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-charcoal">
+      <div className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-charcoal">
         <span className="text-[10px] tracking-[0.4em] uppercase">Scroll</span>
         <span className="h-10 w-px bg-foreground/30 relative overflow-hidden">
           <span className="absolute top-0 left-0 right-0 h-3 bg-foreground scroll-cue" />
