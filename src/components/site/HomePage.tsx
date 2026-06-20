@@ -349,9 +349,26 @@ function Portfolio() {
                   </div>
                 ))}
               </dl>
-              <a href="#contact" onClick={() => setOpen(null)} className="mt-auto inline-flex items-center justify-center bg-foreground text-background px-6 py-3.5 text-[12px] tracking-[0.22em] uppercase">
-                Design Something Like This
-              </a>
+              <div className="mt-auto flex flex-col sm:flex-row gap-3 pt-8">
+                <a
+                  href={buildWaUrl(
+                    `Hello Good Home Interiors, I'm interested in a project similar to "${open.name}" (${open.cat}, ${open.location}). Could we discuss?`,
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setOpen(null)}
+                  className="flex-1 inline-flex items-center justify-center bg-foreground text-background px-6 py-3.5 text-[12px] tracking-[0.22em] uppercase hover:bg-charcoal transition-colors"
+                >
+                  Enquire on WhatsApp
+                </a>
+                <a
+                  href="#contact-form"
+                  onClick={() => setOpen(null)}
+                  className="flex-1 inline-flex items-center justify-center border border-foreground/30 px-6 py-3.5 text-[12px] tracking-[0.22em] uppercase hover:bg-foreground hover:text-background transition-colors"
+                >
+                  Book Consultation
+                </a>
+              </div>
             </div>
           </div>
         </div>
