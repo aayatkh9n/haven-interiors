@@ -110,9 +110,11 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 96px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
   }
 
   body {
@@ -120,7 +122,14 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
+    overflow-x: hidden;
   }
+
+  @media (max-width: 767px) {
+    body { padding-bottom: 56px; }
+  }
+
+  section[id] { scroll-margin-top: 88px; }
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
